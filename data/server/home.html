@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: hsl(199, 100%, 95%);
+        }
+        .license-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input[type="text"], input[type="submit"], .redirect-link {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            width: 80%;
+            text-align: center;
+            display: block;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .redirect-link {
+            background-color: #f8f9fa;
+            text-decoration: none;
+            color: #007bff;
+            text-align: center;
+        }
+        .redirect-link:hover {
+            background-color: #e2e6ea;
+        }
+        .logo {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="license-form">
+        <a href="/change_cert" class="redirect-link">Go to Certificate Update Page</a>
+        
+        <form action="/submit" method="post">
+            <input type="text" name="licenseKey" placeholder="License Key">
+            <input type="submit" value="Activate">
+        </form>
+        <p id="message"></p>
+    </div>
+</body>
+</html>
+
+
