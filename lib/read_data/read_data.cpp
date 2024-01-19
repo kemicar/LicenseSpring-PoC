@@ -2,7 +2,7 @@
 
 String read_certificate(const char *path)
 {
-  Serial.print("Free heap memory: ");
+  
   Serial.println(ESP.getFreeHeap());
   String certificate = "";
   File file = SPIFFS.open(path, "r");
@@ -10,8 +10,7 @@ String read_certificate(const char *path)
   if (!file || file.isDirectory())
   {
     Serial.println("Failed to open file for reading");
-    Serial.print("Free heap memory: ");
-    Serial.println(ESP.getFreeHeap());
+    
     file.close();
     return certificate;
   }

@@ -35,7 +35,7 @@ void IRAM_ATTR onTimer()
 void setup()
 {
   delay(5000);
-  Serial.begin(9600);
+  Serial.begin(115200);
 
   if (!SPIFFS.begin())
   {
@@ -94,6 +94,7 @@ void loop()
   if (status == true)
   {
     Serial.println("License is activate add functionality");
+    delay(3000);
   }
   delay(20000);
 }
