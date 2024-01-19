@@ -13,7 +13,7 @@ String password;
 String certificate;
 
 bool licenseKeyReceived = false;
-bool status = false;
+bool state = false;
 
 // JSON respone
 DynamicJsonDocument response(2500);
@@ -72,7 +72,7 @@ void setup()
 
   response = api->check_license(product_short_code, license_key);
 
-  status = response["license_active"].as<bool>();
+  state = response["license_active"].as<bool>();
 
   timer = timerBegin(0, 80, true);
   timerAttachInterrupt(timer, &onTimer, true);
@@ -86,12 +86,12 @@ void loop()
   {
 
     response = api->check_license(product_short_code, license_key);
-    status = response["license_active"].as<bool>();
+    state = response["license_active"].as<bool>();
 
     hourCounter = 0;
   }
 
-  if (status == true)
+  if (state == true)
   {
     Serial.println("License is activate add functionality");
     delay(3000);
