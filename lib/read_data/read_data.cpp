@@ -2,8 +2,7 @@
 
 String read_certificate(const char *path)
 {
-  
-  Serial.println(ESP.getFreeHeap());
+
   String certificate = "";
   File file = SPIFFS.open(path, "r");
 

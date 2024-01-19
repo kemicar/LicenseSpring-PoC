@@ -142,7 +142,7 @@ Once the license activation process is completed, the ESP32 performs the followi
 
 ## APIcall Class Documentation
 
-The `APIcall` class facilitates secure communication with an API server over HTTPS and SSL/TLS protocols, optimized for use with an ESP32 board.
+Inside **lib** folder there is the `APIcall` class that facilitates secure communication with an API server over HTTPS and SSL/TLS protocols, optimized for use with an ESP32 board.
 
 ## Constructor
 
@@ -201,6 +201,7 @@ Encodes a byte array into a Base64 string.
 ## Contact info
 For any question about this PoC solution contact:
 **teo.terzic@licensespring.com**
+
 ## License
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE.txt) file for details.
 
